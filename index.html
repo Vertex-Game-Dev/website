@@ -22,6 +22,13 @@
 
     <!-- Animation on Scroll css -->
     <link href="assets/libs/aos/aos.css" rel="stylesheet" type="text/css">
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body class="bg-slate-900">
@@ -289,27 +296,37 @@
 <section class="py-14">
     <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
         <div class="swiper video-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <video controls class="w-full h-auto">
-                        <source src="https://youtu.be/LPZh9BOjkQs?feature=shared" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="swiper-slide">
-                    <video controls class="w-full h-auto">
-                        <source src="https://youtu.be/WUvTyaaNkzM?feature=shared" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                
-            
-            <div class="swiper-pagination"></div>
-            
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <iframe
+        class="w-3/4 mx-auto"
+        style="height: 500px;"
+        src="https://www.youtube.com/embed/LPZh9BOjkQs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
+    <div class="swiper-slide">
+      <iframe
+        class="w-3/4 mx-auto"
+        style="height: 500px;"
+        src="https://www.youtube.com/embed/WUvTyaaNkzM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+    </div>
+</section>
 
 
 </section>
@@ -628,6 +645,24 @@ Club Updates</a>
         <i data-lucide="chevron-up" class="h-4 w-4"></i>
     </button>
     <!-- Back To Top End -->
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.video-swiper', {
+      loop: true, // Enables looping of slides
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
+</script>
+
 
     <!-- Plugin Js -->
     <script src="assets/libs/preline/preline.js"></script>
