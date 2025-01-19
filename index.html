@@ -802,20 +802,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         'items-center' // Center vertically
       );
 
-      const iframe = document.createElement('iframe');
+const iframe = document.createElement('iframe');
       iframe.src = url;
-      iframe.classList.add(
-        'w-3/4', // 75% width
-        'mx-auto',
-        'h-[500px]', 
-        'rounded-xl', 
-        'shadow-lg' 
-      );
       iframe.title = 'YouTube video player';
       iframe.frameBorder = '0';
       iframe.allow =
         'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       iframe.allowFullscreen = true;
+
+      iframe.classList.add(
+        'w-full',
+        'sm:w-3/4', 
+        'md:w-2/3', 
+        'lg:w-1/2', 
+        'h-[200px]',
+        'sm:h-[300px]',
+        'md:h-[400px]',
+        'lg:h-[500px]',
+        'mx-auto', 
+        'rounded-xl', 
+        'shadow-lg' 
+      );
 
       slide.appendChild(iframe);
       videoSliderWrapper.appendChild(slide);
