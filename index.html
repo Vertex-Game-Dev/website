@@ -1,12 +1,39 @@
-    <!DOCTYPE html>
-    <html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
 
-    <head>
+        <head>
+        <!-- Basic Meta Tags -->
         <meta charset="utf-8" />
-        <title>Vertex Game Develoment and Animation Club</title>
+        <title>Vertex Game Development & Animation Club | MIT AOE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Vertex - Game Develoment and Animation Club from MIT AOE" name="description" />
-        <meta content="vertex" name="author" />
+        <meta name="description" content="Join Vertex Game Development & Animation Club at MIT AOE – a community for game developers, animators, and tech enthusiasts to build and showcase projects, participate in events, and collaborate with experts." />
+        <meta name="author" content="Vertex GDNA Club" />
+        <meta name="keywords" content="Vertex GDNA, Vertex-GDNA, vertex gdna, vertex mitaoe, mitaoe vertex, game development mitaoe, game development, vertex gdna mitaoe, animation, MIT AOE, Vertex Club, coding, Manim, game design, VR, AR, Unity, Unreal Engine, programming, student club" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Canonical URL (Prevents duplicate content issues) -->
+        <link rel="canonical" href="https://vertexclub.com/" />
+
+        <!-- Open Graph (OG) Meta Tags for Social Media -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Vertex Game Development & Animation Club | MIT AOE" />
+        <meta property="og:description" content="Explore game development, animation, and technology with Vertex GDNA Club at MIT AOE. Join events, build projects, and connect with industry experts." />
+        <meta property="og:image" content="https://vertexclub.com/assets/images/og-image.jpg" />
+        <meta property="og:url" content="https://vertexclub.com/" />
+        <meta property="og:site_name" content="Vertex GDNA Club" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Vertex Game Development & Animation Club | MIT AOE" />
+        <meta name="twitter:description" content="Join Vertex GDNA Club to learn game development, animation, and technology at MIT AOE. Participate in hackathons, workshops, and more." />
+        <meta name="twitter:image" content="https://vertexclub.com/assets/images/twitter-card.jpg" />
+        <meta name="twitter:site" content="@VertexClub" />
+        <meta name="twitter:creator" content="@VertexClub" />
+
+        <meta name="google-site-verification" content="n0_CWOywciMN-qayCjTbxn1IxCUcs02aeC1EJvqCG1g" />
+        
+        <!-- Favicon -->
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -29,9 +56,9 @@
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    </head>
+        </head>
 
-    <body class="bg-slate-900">
+        <body class="bg-slate-900">
         <div>
             <div class="fixed top-0 -z-10">
                 <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
@@ -356,7 +383,7 @@
 
         <!-- Video Slider Section -->
 
-    <!--     <section class="py-14">
+        <!--     <section class="py-14">
             <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
                 <div class="swiper video-swiper">
                     <div class="swiper-wrapper">
@@ -399,9 +426,9 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
-    </section> -->
+        </section> -->
 
-    <section class="py-14">
+        <section class="py-14">
         <div class="container mx-auto">
           <div class="swiper video-slider-swiper">
             <div class="swiper-wrapper" id="video-slider-wrapper">
@@ -412,7 +439,7 @@
             <div class="swiper-button-prev"></div>
           </div>
         </div>
-      </section>
+        </section>
 
         <!-- Club Co-ordinators -->
         <!-- Start -->
@@ -682,7 +709,7 @@
             <i data-lucide="youtube"
                 class="h-5 w-5 text-default-300 group-hover:text-white"></i>
         </a>
-    </li>
+        </li>
                             </ul>
                         </div>
                     </div>
@@ -772,7 +799,7 @@
         <!-- Back To Top End -->
 
 
-    <!--     <script>
+        <!--     <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const swiper = new Swiper('.video-swiper', {
                     loop: true, // Enables looping of slides
@@ -788,9 +815,9 @@
             });
         </script> -->
 
-    <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      try {
+        <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+        try {
         const response = await fetch('videos.json');
         const { videos } = await response.json();
 
@@ -805,7 +832,7 @@
             'items-center' // Center vertically
           );
 
-    const iframe = document.createElement('iframe');
+        const iframe = document.createElement('iframe');
           iframe.src = url;
           iframe.title = 'YouTube video player';
           iframe.frameBorder = '0';
@@ -843,12 +870,12 @@
             clickable: true,
           },
         });
-      } catch (error) {
+        } catch (error) {
         console.error('Error loading video slider:', error);
-      }
-    });
+        }
+        });
 
-    </script>
+        </script>
 
         <!-- Plugin Js -->
         <script src="assets/libs/preline/preline.js"></script>
@@ -875,6 +902,6 @@
         <script src="assets/js/video.js"></script>
 
 
-    </body>
+        </body>
 
-    </html>
+        </html>
