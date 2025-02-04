@@ -1,878 +1,880 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <title>Vertex Game Develoment and Animation Club</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Vertex - Game Develoment and Animation Club from MIT AOE" name="description" />
-    <meta content="vertex" name="author" />
+    <head>
+        <meta charset="utf-8" />
+        <title>Vertex Game Develoment and Animation Club</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Vertex - Game Develoment and Animation Club from MIT AOE" name="description" />
+        <meta content="vertex" name="author" />
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!--Swiper slider css-->
-    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+        <!--Swiper slider css-->
+        <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Style css -->
-    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+        <!-- Style css -->
+        <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Icons css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <!-- Icons css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Animation on Scroll css -->
-    <link href="assets/libs/aos/aos.css" rel="stylesheet" type="text/css">
+        <!-- Animation on Scroll css -->
+        <link href="assets/libs/aos/aos.css" rel="stylesheet" type="text/css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-</head>
+    </head>
 
-<body class="bg-slate-900">
-    <div>
-        <div class="fixed top-0 -z-10">
-            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
-            </div>
-        </div>
-        <div class="fixed top-0 end-0 -z-10">
-            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
-            </div>
-        </div>
-        <div class="fixed inset-0 flex items-center justify-center -z-10">
-            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
-            </div>
-        </div>
-        <div class="fixed bottom-0 start-0 -z-10">
-            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
-            </div>
-        </div>
-        <div class="fixed bottom-0 end-0 -z-10">
-            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
-            </div>
-        </div>
-    </div><!-- end body bg gradient -->
-
-    <!-- Navbar Start -->
-    <header id="navbar-sticky" class="navbar">
-        <div class="container">
-            <nav>
-                <!-- Navbar Brand Logo -->
-
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" class="h-10" alt="WebAi Logo">
-                </a>
-
-                <!-- Moblie Menu Toggle Button (Offcanvas Button) -->
-                <div class="lg:hidden flex items-center ms-auto px-2.5">
-                    <button
-                        class="hs-collapse-toggle inline-flex items-center justify-center h-9 w-12 rounded-md border border-white/20 bg-default-100/5"
-                        type="button" id="hs-unstyled-collapse" data-hs-collapse="#mobileMenu" data-hs-type="collapse">
-                        <i data-lucide="menu" class="h-5 w-5 stroke-white"></i>
-                    </button>
+    <body class="bg-slate-900">
+        <div>
+            <div class="fixed top-0 -z-10">
+                <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
                 </div>
+            </div>
+            <div class="fixed top-0 end-0 -z-10">
+                <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+                </div>
+            </div>
+            <div class="fixed inset-0 flex items-center justify-center -z-10">
+                <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+                </div>
+            </div>
+            <div class="fixed bottom-0 start-0 -z-10">
+                <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+                </div>
+            </div>
+            <div class="fixed bottom-0 end-0 -z-10">
+                <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+                </div>
+            </div>
+        </div><!-- end body bg gradient -->
 
-                <!-- Nevigation Menu -->
-                <div id="mobileMenu"
-                    class="hs-collapse transition-all duration-300 lg:basis-auto basis-full grow hidden lg:flex items-center justify-center mx-auto mt-2 lg:mt-0">
-                    <ul id="navbar-navlist" class="navbar-nav">
-                        <!-- Home Page Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
+        <!-- Navbar Start -->
+        <header id="navbar-sticky" class="navbar">
+            <div class="container">
+                <nav>
+                    <!-- Navbar Brand Logo -->
 
-                        <!-- {Projects} Page Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" class="h-10" alt="WebAi Logo">
+                    </a>
 
-                        <!-- Events Page Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="events.html">Events</a>
-                        </li>
+                    <!-- Moblie Menu Toggle Button (Offcanvas Button) -->
+                    <div class="lg:hidden flex items-center ms-auto px-2.5">
+                        <button
+                            class="hs-collapse-toggle inline-flex items-center justify-center h-9 w-12 rounded-md border border-white/20 bg-default-100/5"
+                            type="button" id="hs-unstyled-collapse" data-hs-collapse="#mobileMenu" data-hs-type="collapse">
+                            <i data-lucide="menu" class="h-5 w-5 stroke-white"></i>
+                        </button>
+                    </div>
 
-                        <!-- About Page Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
+                    <!-- Nevigation Menu -->
+                    <div id="mobileMenu"
+                        class="hs-collapse transition-all duration-300 lg:basis-auto basis-full grow hidden lg:flex items-center justify-center mx-auto mt-2 lg:mt-0">
+                        <ul id="navbar-navlist" class="navbar-nav">
+                            <!-- Home Page Link -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
 
-                        <!-- Faq Page Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="team.html">Team</a>
-                        </li>
-                    </ul>
+                            <!-- {Projects} Page Link -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+
+                            <!-- Events Page Link -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html">Events</a>
+                            </li>
+
+                            <!-- About Page Link -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+
+                            <!-- Faq Page Link -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="team.html">Team</a>
+                            </li>
+                        </ul>
+                        <!-- Contact Button -->
+                        <div
+                            class="lg:hidden flex items-center pt-4 mt-4 lg:pt-0 lg:mt-0 border-t border-white/10 lg:border-none">
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-3"><i
+                                    data-lucide="handshake" class="h-5 w-5 me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
                     <!-- Contact Button -->
-                    <div
-                        class="lg:hidden flex items-center pt-4 mt-4 lg:pt-0 lg:mt-0 border-t border-white/10 lg:border-none">
+                    <div class="hidden lg:flex items-center">
                         <a href="#"
-                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-3"><i
+                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300"><i
                                 data-lucide="handshake" class="h-5 w-5 me-2"></i> Contact Us</a>
                     </div>
-                </div>
-                <!-- Contact Button -->
-                <div class="hidden lg:flex items-center">
-                    <a href="#"
-                        class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300"><i
-                            data-lucide="handshake" class="h-5 w-5 me-2"></i> Contact Us</a>
-                </div>
-            </nav><!-- end nav -->
-        </div>
-    </header>
-    <!-- Navbar End -->
+                </nav><!-- end nav -->
+            </div>
+        </header>
+        <!-- Navbar End -->
 
-    <!-- Hero Section Start -->
-    <section id="home" class="relative overflow-hidden pt-[72px] bg-default-950/40 backdrop-blur-3xl">
-        <div
-            class="absolute h-14 w-14 bg-primary/10 top-2/3 start-80 -z-1 rounded-2xl rounded-tl-none rounded-br-none animate-[spin_10s_linear_infinite]">
-        </div>
-        <div class="absolute h-14 w-14 bg-primary/20 top-2/3 end-80 -z-1 rounded-full animate-ping"></div>
+        <!-- Hero Section Start -->
+        <section id="home" class="relative overflow-hidden pt-[72px] bg-default-950/40 backdrop-blur-3xl">
+            <div
+                class="absolute h-14 w-14 bg-primary/10 top-2/3 start-80 -z-1 rounded-2xl rounded-tl-none rounded-br-none animate-[spin_10s_linear_infinite]">
+            </div>
+            <div class="absolute h-14 w-14 bg-primary/20 top-2/3 end-80 -z-1 rounded-full animate-ping"></div>
 
-        <div class="px-6 pt-20 overflow-hidden" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="800">
-            <div class="relative">
-                <div
-                    class="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-default-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0">
-                    <svg viewBox="0 0 1026 1026" fill="none" aria-hidden="true"
-                        class="absolute inset-0 h-full w-full animate-spin-slow">
-                        <path class="stroke-white/10"
-                            d="M1025 513c0 282.77-229.23 512-512 512S1 795.77 1 513 230.23 1 513 1s512 229.23 512 512Z"
-                            stroke-opacity="0.7"></path>
-                        <path d="M513 1025C230.23 1025 1 795.77 1 513" stroke="url(#:S2:-gradient-1)"
-                            stroke-linecap="round"></path>
-                        <defs>
-                            <linearGradient id=":S2:-gradient-1" x1="1" y1="513" x2="1" y2="1025"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#7c3aed"></stop>
-                                <stop offset="1" stop-color="#7c3aed" stop-opacity="0"></stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg viewBox="0 0 1026 1026" fill="none" aria-hidden="true"
-                        class="absolute inset-0 h-full w-full animate-spin-reverse-slower">
-                        <path class="stroke-white/10"
-                            d="M913 513c0 220.914-179.086 400-400 400S113 733.914 113 513s179.086-400 400-400 400 179.086 400 400Z"
-                            stroke-opacity="0.7"></path>
-                        <path d="M913 513c0 220.914-179.086 400-400 400" stroke="url(#:S2:-gradient-2)"
-                            stroke-linecap="round"></path>
-                        <defs>
-                            <linearGradient id=":S2:-gradient-2" x1="913" y1="513" x2="913" y2="913"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#7c3aed"></stop>
-                                <stop offset="1" stop-color="#7c3aed" stop-opacity="0"></stop>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+            <div class="px-6 pt-20 overflow-hidden" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="800">
+                <div class="relative">
+                    <div
+                        class="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-default-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0">
+                        <svg viewBox="0 0 1026 1026" fill="none" aria-hidden="true"
+                            class="absolute inset-0 h-full w-full animate-spin-slow">
+                            <path class="stroke-white/10"
+                                d="M1025 513c0 282.77-229.23 512-512 512S1 795.77 1 513 230.23 1 513 1s512 229.23 512 512Z"
+                                stroke-opacity="0.7"></path>
+                            <path d="M513 1025C230.23 1025 1 795.77 1 513" stroke="url(#:S2:-gradient-1)"
+                                stroke-linecap="round"></path>
+                            <defs>
+                                <linearGradient id=":S2:-gradient-1" x1="1" y1="513" x2="1" y2="1025"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7c3aed"></stop>
+                                    <stop offset="1" stop-color="#7c3aed" stop-opacity="0"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg viewBox="0 0 1026 1026" fill="none" aria-hidden="true"
+                            class="absolute inset-0 h-full w-full animate-spin-reverse-slower">
+                            <path class="stroke-white/10"
+                                d="M913 513c0 220.914-179.086 400-400 400S113 733.914 113 513s179.086-400 400-400 400 179.086 400 400Z"
+                                stroke-opacity="0.7"></path>
+                            <path d="M913 513c0 220.914-179.086 400-400 400" stroke="url(#:S2:-gradient-2)"
+                                stroke-linecap="round"></path>
+                            <defs>
+                                <linearGradient id=":S2:-gradient-2" x1="913" y1="513" x2="913" y2="913"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7c3aed"></stop>
+                                    <stop offset="1" stop-color="#7c3aed" stop-opacity="0"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
 
-                <div class="container">
-                    <div class="py-14 text-center relative">
-                        <div class="flex justify-center">
-                            <div class="max-w-2xl">
-                                <h4 class="font-semibold text-4xl/tight lg:text-6xl/tight capitalize text-white mb-4">
-                                    <span
-                                        class="bg-gradient-to-l from-red-600 to-primary text-transparent bg-clip-text">VERTEX
-                                        - GDNA</h4>
-                                <h2 class="md:text-6xl/tight text-5xl text-default-100 font-semibold mb-6">Game
-                                    Development and Animation</h2>
-                                <p class="text-base text-default-200 font-medium px-5">At Vertex GDNA, we specialize in
-                                    crafting immersive games and creating captivating mathematical animations to educate
-                                    and inspire.</p>
+                    <div class="container">
+                        <div class="py-14 text-center relative">
+                            <div class="flex justify-center">
+                                <div class="max-w-2xl">
+                                    <h4 class="font-semibold text-4xl/tight lg:text-6xl/tight capitalize text-white mb-4">
+                                        <span
+                                            class="bg-gradient-to-l from-red-600 to-primary text-transparent bg-clip-text">VERTEX
+                                            - GDNA</h4>
+                                    <h2 class="md:text-6xl/tight text-5xl text-default-100 font-semibold mb-6">Game
+                                        Development and Animation</h2>
+                                    <p class="text-base text-default-200 font-medium px-5">At Vertex GDNA, we specialize in
+                                        crafting immersive games and creating captivating mathematical animations to educate
+                                        and inspire.</p>
 
-                                <div class="flex flex-wrap items-center justify-center gap-6 mt-10">
-                                    <a href="#"
-                                        class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join
-                                        Vertex
-                                        <i data-lucide="move-right" class="h-5 w-5"></i>
-                                    </a>
+                                    <div class="flex flex-wrap items-center justify-center gap-6 mt-10">
+                                        <a href="#"
+                                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join
+                                            Vertex
+                                            <i data-lucide="move-right" class="h-5 w-5"></i>
+                                        </a>
 
-                                    <!-- <a href="#" class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join Vertex <i data-lucide="move-right" class="h-5 w-5"></i>
-                                    </a> -->
+                                        <!-- <a href="#" class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join Vertex <i data-lucide="move-right" class="h-5 w-5"></i>
+                                        </a> -->
+                                    </div>
+                                    <p class="text-sm font-medium text-default-400 mt-5">Unleash your creativity and build
+                                        the future of gaming and animation with Vertex GDNA!</p>
                                 </div>
-                                <p class="text-sm font-medium text-default-400 mt-5">Unleash your creativity and build
-                                    the future of gaming and animation with Vertex GDNA!</p>
                             </div>
                         </div>
-                    </div>
-                </div><!-- end container -->
-            </div><!-- end relative -->
-        </div>
-    </section>
-    <!-- Hero end  -->
+                    </div><!-- end container -->
+                </div><!-- end relative -->
+            </div>
+        </section>
+        <!-- Hero end  -->
 
-    <!-- start -->
-    <section class="py-14">
-        <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
-            <div class="mt-5">
-                <!-- Swiper -->
-                <div class="swiper logo-swiper">
+        <!-- start -->
+        <section class="py-14">
+            <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
+                <div class="mt-5">
+                    <!-- Swiper -->
+                    <div class="swiper logo-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/5.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/logo/5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end -->
+
+        <!-- Start -->
+        <section id="features" class="py-14">
+            <div class="container">
+                <div class="flex items-end justify-between mb-10">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="text-3xl font-medium capitalize text-white mb-4">We're here to support you every step way
+                        </h2>
+                        <p class="text-sm text-default-200 font-medium">Start creating with Vertex GDNA, where we help you
+                            bring your game development and <br> animation ideas to life with creativity and collaboration.
+                        </p>
+                    </div>
+                </div><!-- end flex -->
+
+                <div class="grid md:grid-cols-2 gap-px overflow-hidden rounded-3xl">
+                    <div class="bg-default-950/40 backdrop-blur-3xl" data-aos="fade-right" data-aos-easing="ease"
+                        data-aos-duration="1000">
+                        <div class="sm:p-10 p-8">
+                            <div
+                                class="inline-flex items-center justify-center h-16 w-16 bg-primary/10 text-primary rounded-xl mb-10">
+                                <i data-lucide="gamepad-2" class="h-10 w-10"></i>
+                            </div>
+                            <h2 class="text-2xl text-white font-medium mb-4">Game Development</h2>
+                            <p class="text-base text-default-200 mb-6"> At Vertex GDNA, we empower creators to design and
+                                develop immersive games, fostering innovation and collaboration to bring imaginative ideas
+                                to life.</p>
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">More<i
+                                    data-lucide="move-right" class="h-5 w-5"></i></a>
+                        </div>
+                    </div><!-- end card -->
+
+                    <div class="bg-default-950/40 backdrop-blur-3xl" data-aos="fade-left" data-aos-easing="ease"
+                        data-aos-duration="1000">
+                        <div class="sm:p-10 p-8">
+                            <div
+                                class="inline-flex items-center justify-center h-16 w-16 bg-primary/10 text-primary rounded-xl mb-10">
+                                <i data-lucide="youtube" class="h-10 w-10"></i>
+                            </div>
+                            <h2 class="text-2xl text-white font-medium mb-4">Mathematical Animations with Manim</h2>
+                            <p class="text-base text-default-200 mb-6">We transform complex mathematical concepts into
+                                stunning animations using Manim, making learning visual, engaging, and accessible to all.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">More
+                                <i data-lucide="move-right" class="h-5 w-5"></i></a>
+                        </div>
+                    </div><!-- end card -->
+                </div><!-- end flex -->
+            </div><!-- end container -->
+        </section>
+        <!-- end -->
+
+        <!-- start -->
+        <section class="py-14">
+            <div class="container">
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <div data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
+                        <span
+                            class="py-1 px-3 rounded-md text-sm font-medium uppercase tracking-wider text-primary bg-primary/20">Game
+                            Dev</span>
+                        <h2 class="text-3xl/snug font-medium capitalize text-white mt-4">Create amazing games with
+                            cutting-edge technology. </h2>
+                        <p class="text-base font-medium text-default-200 mt-5">Start working with Vertex GDNA, where we help
+                            you build immersive game experiences by combining creativity, collaboration, <br>and advanced
+                            game development techniques.</p>
+                        <div class="flex flex-wrap items-center gap-6 mt-10">
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Game
+                                Development
+                                <i data-lucide="move-right" class="h-5 w-5"></i>
+                            </a>
+
+                        </div>
+                    </div><!-- end grid-col -->
+
+                    <div data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
+                        <img src="assets/images/ai/video-2.svg" class="h-full w-full" alt="">
+                    </div><!-- end grid-col -->
+                </div><!-- end grid -->
+
+                <div class="grid md:grid-cols-2 gap-6 items-center mt-14">
+                    <div class="2xl:-ms-16" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
+                        <img src="assets/images/ai/video-1.svg" class="h-full w-full" alt="">
+                    </div><!-- end grid-col -->
+
+                    <div data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
+                        <span
+                            class="py-1 px-3 rounded-md text-sm font-medium uppercase tracking-wider text-primary bg-primary/20">Manim</span>
+                        <h2 class="text-3xl/snug font-medium capitalize text-white mt-4">Create stunning mathematical
+                            animations with Manim.</h2>
+                        <p class="text-base font-medium text-default-200 mt-5"> Start working with Vertex GDNA, where we
+                            bring complex math concepts to life through dynamic, customizable animations using <br> the
+                            power of Manim.</p>
+                        <div class="flex flex-wrap items-center gap-6 mt-10">
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Manim
+                                <i data-lucide="move-right" class="h-5 w-5"></i>
+                            </a>
+
+
+                        </div>
+                    </div><!-- end grid-col -->
+                </div><!-- end grid -->
+            </div><!-- end container -->
+        </section>
+        <!-- end -->
+
+
+
+        <!-- Video Slider Section -->
+
+    <!--     <section class="py-14">
+            <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
+                <div class="swiper video-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="assets/images/logo/1.png" alt="">
+                            <iframe class="w-3/4 mx-auto" style="height: 500px;"
+                                src="https://www.youtube.com/embed/LPZh9BOjkQs" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/logo/2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/4.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/5.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/1.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/4.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/logo/5.png" alt="">
+                            <iframe class="w-3/4 mx-auto" style="height: 500px;"
+                                src="https://www.youtube.com/embed/WUvTyaaNkzM" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
+
             </div>
-        </div>
-    </section>
-    <!-- end -->
+        </section> -->
 
-    <!-- Start -->
-    <section id="features" class="py-14">
-        <div class="container">
-            <div class="flex items-end justify-between mb-10">
-                <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="text-3xl font-medium capitalize text-white mb-4">We're here to support you every step way
-                    </h2>
-                    <p class="text-sm text-default-200 font-medium">Start creating with Vertex GDNA, where we help you
-                        bring your game development and <br> animation ideas to life with creativity and collaboration.
-                    </p>
-                </div>
-            </div><!-- end flex -->
+        <!-- Try 01 -->
 
-            <div class="grid md:grid-cols-2 gap-px overflow-hidden rounded-3xl">
-                <div class="bg-default-950/40 backdrop-blur-3xl" data-aos="fade-right" data-aos-easing="ease"
-                    data-aos-duration="1000">
-                    <div class="sm:p-10 p-8">
-                        <div
-                            class="inline-flex items-center justify-center h-16 w-16 bg-primary/10 text-primary rounded-xl mb-10">
-                            <i data-lucide="gamepad-2" class="h-10 w-10"></i>
-                        </div>
-                        <h2 class="text-2xl text-white font-medium mb-4">Game Development</h2>
-                        <p class="text-base text-default-200 mb-6"> At Vertex GDNA, we empower creators to design and
-                            develop immersive games, fostering innovation and collaboration to bring imaginative ideas
-                            to life.</p>
-                        <a href="#"
-                            class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">More<i
-                                data-lucide="move-right" class="h-5 w-5"></i></a>
-                    </div>
-                </div><!-- end card -->
-
-                <div class="bg-default-950/40 backdrop-blur-3xl" data-aos="fade-left" data-aos-easing="ease"
-                    data-aos-duration="1000">
-                    <div class="sm:p-10 p-8">
-                        <div
-                            class="inline-flex items-center justify-center h-16 w-16 bg-primary/10 text-primary rounded-xl mb-10">
-                            <i data-lucide="youtube" class="h-10 w-10"></i>
-                        </div>
-                        <h2 class="text-2xl text-white font-medium mb-4">Mathematical Animations with Manim</h2>
-                        <p class="text-base text-default-200 mb-6">We transform complex mathematical concepts into
-                            stunning animations using Manim, making learning visual, engaging, and accessible to all.
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center justify-center gap-2 border border-white/10 text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">More
-                            <i data-lucide="move-right" class="h-5 w-5"></i></a>
-                    </div>
-                </div><!-- end card -->
-            </div><!-- end flex -->
-        </div><!-- end container -->
-    </section>
-    <!-- end -->
-
-    <!-- start -->
-    <section class="py-14">
-        <div class="container">
-            <div class="grid md:grid-cols-2 gap-6 items-center">
-                <div data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
-                    <span
-                        class="py-1 px-3 rounded-md text-sm font-medium uppercase tracking-wider text-primary bg-primary/20">Game
-                        Dev</span>
-                    <h2 class="text-3xl/snug font-medium capitalize text-white mt-4">Create amazing games with
-                        cutting-edge technology. </h2>
-                    <p class="text-base font-medium text-default-200 mt-5">Start working with Vertex GDNA, where we help
-                        you build immersive game experiences by combining creativity, collaboration, <br>and advanced
-                        game development techniques.</p>
-                    <div class="flex flex-wrap items-center gap-6 mt-10">
-                        <a href="#"
-                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Game
-                            Development
-                            <i data-lucide="move-right" class="h-5 w-5"></i>
-                        </a>
-
-                    </div>
-                </div><!-- end grid-col -->
-
-                <div data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
-                    <img src="assets/images/ai/video-2.svg" class="h-full w-full" alt="">
-                </div><!-- end grid-col -->
-            </div><!-- end grid -->
-
-            <div class="grid md:grid-cols-2 gap-6 items-center mt-14">
-                <div class="2xl:-ms-16" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
-                    <img src="assets/images/ai/video-1.svg" class="h-full w-full" alt="">
-                </div><!-- end grid-col -->
-
-                <div data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
-                    <span
-                        class="py-1 px-3 rounded-md text-sm font-medium uppercase tracking-wider text-primary bg-primary/20">Manim</span>
-                    <h2 class="text-3xl/snug font-medium capitalize text-white mt-4">Create stunning mathematical
-                        animations with Manim.</h2>
-                    <p class="text-base font-medium text-default-200 mt-5"> Start working with Vertex GDNA, where we
-                        bring complex math concepts to life through dynamic, customizable animations using <br> the
-                        power of Manim.</p>
-                    <div class="flex flex-wrap items-center gap-6 mt-10">
-                        <a href="#"
-                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Manim
-                            <i data-lucide="move-right" class="h-5 w-5"></i>
-                        </a>
-
-
-                    </div>
-                </div><!-- end grid-col -->
-            </div><!-- end grid -->
-        </div><!-- end container -->
-    </section>
-    <!-- end -->
-
-
-
-    <!-- Video Slider Section -->
-
-<!--     <section class="py-14">
+        <!-- Video Slider Section -->
+        <!-- <section class="py-14">
         <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
             <div class="swiper video-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <iframe class="w-3/4 mx-auto" style="height: 500px;"
-                            src="https://www.youtube.com/embed/LPZh9BOjkQs" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe class="w-3/4 mx-auto" style="height: 500px;"
-                            src="https://www.youtube.com/embed/WUvTyaaNkzM" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
+                <div class="swiper-wrapper" id="video-slider"> -->
+        <!-- Videos will be dynamically injected here -->
+        <!-- </div>
+                
                 <div class="swiper-pagination"></div>
+                
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-
         </div>
     </section> -->
 
-    <!-- Try 01 -->
-
-    <!-- Video Slider Section -->
-    <!-- <section class="py-14">
-    <div class="container" data-aos="zoom-in" data-aos-easing="ease" data-aos-duration="1000">
-        <div class="swiper video-swiper">
-            <div class="swiper-wrapper" id="video-slider"> -->
-    <!-- Videos will be dynamically injected here -->
-    <!-- </div>
-            
+    <section class="py-14">
+        <div class="container mx-auto">
+          <div class="swiper video-slider-swiper">
+            <div class="swiper-wrapper" id="video-slider-wrapper">
+              <!-- Slides will be dynamically generated -->
+            </div>
             <div class="swiper-pagination"></div>
-            
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+          </div>
         </div>
-    </div>
-</section> -->
+      </section>
 
-<section class="py-14">
-    <div class="container mx-auto">
-      <div class="swiper video-slider-swiper">
-        <div class="swiper-wrapper" id="video-slider-wrapper">
-          <!-- Slides will be dynamically generated -->
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-    <!-- Club Co-ordinators -->
-    <!-- Start -->
-    <section id="categories" class="py-24">
-        <div class="container relative">
-            <div class="flex flex-wrap items-center justify-between mb-10">
-                <div>
-                    <h2 class="text-4xl font-medium capitalize text-white mb-2">Club Co-ordinators</h2>
-                    <p class="text-sm text-default-200 font-medium">The club coordinators oversee Vertex GDNA's
-                        activities, ensuring smooth execution of game development <br> and animation projects while
-                        promoting collaboration and innovation. </p>
-                </div>
-                <a href="#"
-                    class="inline-flex items-center justify-center gap-2 border border-white/10 text-sm text-white py-1.5 px-4 rounded-full hover:bg-primary-hover transition-all duration-300">See
-                    More <i data-lucide="move-right" class="h-5 w-5"></i></a>
-            </div><!-- end flex -->
-
-            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
-                <!-- Start Bid -->
-                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
-                    data-aos="zoom-in" data-aos-duration="800">
-                    <div class="p-3">
-                        <div class="relative">
-                            <img src="assets/images/Faculty/Azar.png" alt="" class="rounded-md">
-
-                            <div
-                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
-                            </div>
-
-                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
-                                <div class="inline-flex justify-center w-full">
-                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
-                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-3 relative">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
-                                    <span>
-                                        <a href="#"
-                                            class="text-sm font-medium  text-default-100 hover:text-primary">@Azhar
-                                            Shaikh Sir</a>
-                                        <span class="text-xs text-default-100 block">Club Head</span>
-                                    </span>
-                                </div>
-                                <a href="#"
-                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
-                                        class="mdi mdi-heart"></i></a>
-                            </div>
-
-
-                        </div>
+        <!-- Club Co-ordinators -->
+        <!-- Start -->
+        <section id="categories" class="py-24">
+            <div class="container relative">
+                <div class="flex flex-wrap items-center justify-between mb-10">
+                    <div>
+                        <h2 class="text-4xl font-medium capitalize text-white mb-2">Club Co-ordinators</h2>
+                        <p class="text-sm text-default-200 font-medium">The club coordinators oversee Vertex GDNA's
+                            activities, ensuring smooth execution of game development <br> and animation projects while
+                            promoting collaboration and innovation. </p>
                     </div>
-                </div>
-                <!-- End Bid -->
-
-
-
-                <!-- Start Bid -->
-                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
-                    data-aos="zoom-in" data-aos-duration="800">
-                    <div class="p-3">
-                        <div class="relative">
-                            <img src="assets/images/Faculty/Sini.png" alt="" class="rounded-md">
-
-                            <div
-                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
-                            </div>
-
-                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
-                                <div class="inline-flex justify-center w-full">
-                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
-                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-3 relative">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
-                                    <span>
-                                        <a href="#"
-                                            class="text-sm font-medium  text-default-100 hover:text-primary">@Sini
-                                            Ronson Ma'am</a>
-                                        <span class="text-xs text-default-100 block">Club Head</span>
-                                    </span>
-                                </div>
-                                <a href="#"
-                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
-                                        class="mdi mdi-heart"></i></a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Bid -->
-
-                <!-- Start Bid -->
-                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
-                    data-aos="zoom-in" data-aos-duration="800">
-                    <div class="p-3">
-                        <div class="relative">
-                            <img src="assets/images/Faculty/Asha_enhanced.png" alt="" class="rounded-md">
-
-                            <div
-                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
-                            </div>
-
-                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
-                                <div class="inline-flex justify-center w-full">
-                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
-                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-3 relative">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
-                                    <span>
-                                        <a href="#"
-                                            class="text-sm font-medium  text-default-100 hover:text-primary">@Asha
-                                            Abhilasha Ma'am</a>
-                                        <span class="text-xs text-default-100 block">Club Head</span>
-                                    </span>
-                                </div>
-                                <a href="#"
-                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
-                                        class="mdi mdi-heart"></i></a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Bid -->
-
-                <!-- Start Bid -->
-                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
-                    data-aos="zoom-in" data-aos-duration="800">
-                    <div class="p-3">
-                        <div class="relative">
-                            <img width="644" height="653" src="assets/images/Faculty/Priti_1.png" alt="" class="rounded-md">
-
-                            <div
-                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
-                            </div>
-
-                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
-                                <div class="inline-flex justify-center w-full">
-                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
-                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-3 relative">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
-                                    <span>
-                                        <a href="#"
-                                            class="text-sm font-medium  text-default-100 hover:text-primary">@Priti
-                                            Shinde Ma'am</a>
-                                        <span class="text-xs text-default-100 block">Club Head</span>
-                                    </span>
-                                </div>
-                                <a href="#"
-                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
-                                        class="mdi mdi-heart"></i></a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Bid -->
-
-
-            </div><!--end grid-->
-        </div><!--end container-->
-    </section>
-    <!-- End -->
-
-
-
-    <!-- start -->
-    <section class="py-14">
-        <div class="container" data-aos="zoom-out" data-aos-easing="ease" data-aos-duration="1000">
-            <div class="p-6 rounded-xl bg-default-950/40">
-                <div class="flex flex-wrap items-center gap-6">
-                    <div class="flex-shrink">
-                        <div class="flex -space-x-2">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
-                                src="assets/images/avatars/img-1.png" alt="Image Description">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
-                                src="assets/images/avatars/img-2.png" alt="Image Description">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
-                                src="assets/images/avatars/img-3.png" alt="Image Description">
-                            <button class="h-10 w-10 font-medium text-primarys rounded-full bg-white">80+</button>
-                        </div>
-                    </div>
-
-                    <div class="flex-grow">
-                        <h3 class="text-lg font-medium text-default-200">Join Our Game Development & Animation Community
-                        </h3>
-                        <p class="w-3/4 text-base font-medium text-default-300 mt-5">
-                            Connect with talented creators and teams as they share their expertise in crafting
-                            innovative games and stunning mathematical animations.
-                        </p>
-                    </div>
-
-                    <div class="flex-shrink">
-                        <a href="#"
-                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join
-                            <i data-lucide="move-right" class="h-5 w-5"></i>
-                        </a>
-                    </div>
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-2 border border-white/10 text-sm text-white py-1.5 px-4 rounded-full hover:bg-primary-hover transition-all duration-300">See
+                        More <i data-lucide="move-right" class="h-5 w-5"></i></a>
                 </div><!-- end flex -->
-            </div><!-- end bg -->
-        </div><!-- end container -->
-    </section>
-    <!-- end -->
 
-    <!-- Footer section start -->
-    <footer class="bg-default-950/40">
-        <div class="container">
-            <div class="grid lg:grid-cols-9 grid-cols-2 gap-10 lg:gap-16 py-20">
-                <div class="lg:col-span-3 sm:col-span-1 col-span-2">
-                    <img src="assets/images/logo.png" class="h-10" alt="">
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                    <!-- Start Bid -->
+                    <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                        data-aos="zoom-in" data-aos-duration="800">
+                        <div class="p-3">
+                            <div class="relative">
+                                <img src="assets/images/Faculty/Azar.png" alt="" class="rounded-md">
 
-                    <div class="mt-7">
-                        <h6 class="text-base text-white mb-4">Follow US :</h6>
-                        <ul class="flex flex-wrap items-center gap-1">
+                                <div
+                                    class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                                </div>
+
+                                <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center w-full">
+                                        <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                            <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 relative">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                        <span>
+                                            <a href="#"
+                                                class="text-sm font-medium  text-default-100 hover:text-primary">@Azhar
+                                                Shaikh Sir</a>
+                                            <span class="text-xs text-default-100 block">Club Head</span>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                            class="mdi mdi-heart"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Bid -->
+
+
+
+                    <!-- Start Bid -->
+                    <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                        data-aos="zoom-in" data-aos-duration="800">
+                        <div class="p-3">
+                            <div class="relative">
+                                <img src="assets/images/Faculty/Sini.png" alt="" class="rounded-md">
+
+                                <div
+                                    class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                                </div>
+
+                                <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center w-full">
+                                        <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                            <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 relative">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                        <span>
+                                            <a href="#"
+                                                class="text-sm font-medium  text-default-100 hover:text-primary">@Sini
+                                                Ronson Ma'am</a>
+                                            <span class="text-xs text-default-100 block">Club Head</span>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                            class="mdi mdi-heart"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Bid -->
+
+                    <!-- Start Bid -->
+                    <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                        data-aos="zoom-in" data-aos-duration="800">
+                        <div class="p-3">
+                            <div class="relative">
+                                <img src="assets/images/Faculty/Asha_enhanced.png" alt="" class="rounded-md">
+
+                                <div
+                                    class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                                </div>
+
+                                <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center w-full">
+                                        <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                            <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 relative">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                        <span>
+                                            <a href="#"
+                                                class="text-sm font-medium  text-default-100 hover:text-primary">@Asha
+                                                Abhilasha Ma'am</a>
+                                            <span class="text-xs text-default-100 block">Club Head</span>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                            class="mdi mdi-heart"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Bid -->
+
+                    <!-- Start Bid -->
+                    <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                        data-aos="zoom-in" data-aos-duration="800">
+                        <div class="p-3">
+                            <div class="relative">
+                                <img width="644" height="653" src="assets/images/Faculty/Priti_1.png" alt="" class="rounded-md">
+
+                                <div
+                                    class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                                </div>
+
+                                <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                    <div class="inline-flex justify-center w-full">
+                                        <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                            <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 relative">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                        <span>
+                                            <a href="#"
+                                                class="text-sm font-medium  text-default-100 hover:text-primary">@Priti
+                                                Shinde Ma'am</a>
+                                            <span class="text-xs text-default-100 block">Club Head</span>
+                                        </span>
+                                    </div>
+                                    <a href="#"
+                                        class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                            class="mdi mdi-heart"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Bid -->
+
+
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section>
+        <!-- End -->
+
+
+
+        <!-- start -->
+        <section class="py-14">
+            <div class="container" data-aos="zoom-out" data-aos-easing="ease" data-aos-duration="1000">
+                <div class="p-6 rounded-xl bg-default-950/40">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="flex-shrink">
+                            <div class="flex -space-x-2">
+                                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                    src="assets/images/avatars/img-1.png" alt="Image Description">
+                                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                    src="assets/images/avatars/img-2.png" alt="Image Description">
+                                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                    src="assets/images/avatars/img-3.png" alt="Image Description">
+                                <button class="h-10 w-10 font-medium text-primarys rounded-full bg-white">80+</button>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-medium text-default-200">Join Our Game Development & Animation Community
+                            </h3>
+                            <p class="w-3/4 text-base font-medium text-default-300 mt-5">
+                                Connect with talented creators and teams as they share their expertise in crafting
+                                innovative games and stunning mathematical animations.
+                            </p>
+                        </div>
+
+                        <div class="flex-shrink">
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join
+                                <i data-lucide="move-right" class="h-5 w-5"></i>
+                            </a>
+                        </div>
+                    </div><!-- end flex -->
+                </div><!-- end bg -->
+            </div><!-- end container -->
+        </section>
+        <!-- end -->
+
+        <!-- Footer section start -->
+        <footer class="bg-default-950/40">
+            <div class="container">
+                <div class="grid lg:grid-cols-9 grid-cols-2 gap-10 lg:gap-16 py-20">
+                    <div class="lg:col-span-3 sm:col-span-1 col-span-2">
+                        <img src="assets/images/logo.png" class="h-10" alt="">
+
+                        <div class="mt-7">
+                            <h6 class="text-base text-white mb-4">Follow US :</h6>
+                            <ul class="flex flex-wrap items-center gap-1">
+                                
+                                <li>
+                                    <a href="https://www.instagram.com/vertex.gdna/"
+                                        class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                            data-lucide="instagram"
+                                            class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/Vertex_GDNA"
+                                        class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                            data-lucide="twitter"
+                                            class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/vertex-gdna/"
+                                        class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                            data-lucide="linkedin"
+                                            class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                </li>
+                                <li>
+        <a href="https://www.youtube.com/@Vertex-GDNA" target="_blank"
+            class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary">
+            <i data-lucide="youtube"
+                class="h-5 w-5 text-default-300 group-hover:text-white"></i>
+        </a>
+    </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                        <ul class="flex flex-col gap-3">
+                            <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">For our club</h5>
                             <li>
                                 <a href="javascript:void(0);"
-                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
-                                        data-lucide="facebook"
-                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Events</a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">
+                                    Club Updates</a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Collaboration
+                                    Opportunities
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                        <ul class="flex flex-col gap-3">
+                            <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Support</h5>
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Walkthrough</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);"
-                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
-                                        data-lucide="instagram"
-                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Blog</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);"
-                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
-                                        data-lucide="twitter"
-                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                        <ul class="flex flex-col gap-3">
+                            <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Legal</h5>
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Terms of
+                                    service</a>
                             </li>
                             <li>
                                 <a href="javascript:void(0);"
-                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
-                                        data-lucide="linkedin"
-                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                                    class="text-base font-normal text-default-200 hover:text-white transition-all">Privacy
+                                    policy</a>
                             </li>
                         </ul>
                     </div>
                 </div>
+            </div><!-- Container End -->
 
-                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
-                    <ul class="flex flex-col gap-3">
-                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">For our club</h5>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Events</a>
-                        </li>
+            <div class="border-t border-white/10 py-6">
+                <div
+                    class="container lg:px-20 flex flex-wrap justify-center items-center gap-4 h-full md:justify-between text-center md:text-start">
+                    <p class="text-base font-medium text-default-400">
+                        <script>document.write(new Date().getFullYear())</script>
+                        © Vertex GDNA - <a href="#">Design & Crafted <i data-lucide="heart"
+                                class="inline h-4 w-4 text-red-500 fill-red-500"></i> by Vertex</a>
+                    </p>
+                    <p class="text-base font-medium text-default-400">
+                        <a href="#">Terms Conditions & Policy</a>
+                    </p>
+                </div><!-- Flex End -->
+            </div><!-- Container End -->
+        </footer>
+        <!-- Footer section End -->
 
-
-
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">
-                                Club Updates</a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Collaboration
-                                Opportunities
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
-                    <ul class="flex flex-col gap-3">
-                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Support</h5>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Walkthrough</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Blog</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
-                    <ul class="flex flex-col gap-3">
-                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Legal</h5>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Terms of
-                                service</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);"
-                                class="text-base font-normal text-default-200 hover:text-white transition-all">Privacy
-                                policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div><!-- Container End -->
-
-        <div class="border-t border-white/10 py-6">
-            <div
-                class="container lg:px-20 flex flex-wrap justify-center items-center gap-4 h-full md:justify-between text-center md:text-start">
-                <p class="text-base font-medium text-default-400">
-                    <script>document.write(new Date().getFullYear())</script>
-                    © Vertex GDNA - <a href="#">Design & Crafted <i data-lucide="heart"
-                            class="inline h-4 w-4 text-red-500 fill-red-500"></i> by Vertex</a>
-                </p>
-                <p class="text-base font-medium text-default-400">
-                    <a href="#">Terms Conditions & Policy</a>
-                </p>
-            </div><!-- Flex End -->
-        </div><!-- Container End -->
-    </footer>
-    <!-- Footer section End -->
-
-    <!-- Back To Top Start -->
-    <button id="back-to-top" onclick="topFunction()"
-        class="fixed text-xl rounded-full z-10 bottom-5 end-5 h-8 w-8 text-center bg-white backdrop-blur-3xl text-slate-950 flex justify-center items-center transition-all duration-500 hover:bg-primary hover:text-white hover:rounded-lg">
-        <i data-lucide="chevron-up" class="h-4 w-4"></i>
-    </button>
-    <!-- Back To Top End -->
+        <!-- Back To Top Start -->
+        <button id="back-to-top" onclick="topFunction()"
+            class="fixed text-xl rounded-full z-10 bottom-5 end-5 h-8 w-8 text-center bg-white backdrop-blur-3xl text-slate-950 flex justify-center items-center transition-all duration-500 hover:bg-primary hover:text-white hover:rounded-lg">
+            <i data-lucide="chevron-up" class="h-4 w-4"></i>
+        </button>
+        <!-- Back To Top End -->
 
 
-<!--     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const swiper = new Swiper('.video-swiper', {
-                loop: true, // Enables looping of slides
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
+    <!--     <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper = new Swiper('.video-swiper', {
+                    loop: true, // Enables looping of slides
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
             });
+        </script> -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('videos.json');
+        const { videos } = await response.json();
+
+        const videoSliderWrapper = document.getElementById('video-slider-wrapper');
+
+        videos.forEach((url) => {
+          const slide = document.createElement('div');
+          slide.classList.add(
+            'swiper-slide', 
+            'flex',
+            'justify-center', // Center horizontally
+            'items-center' // Center vertically
+          );
+
+    const iframe = document.createElement('iframe');
+          iframe.src = url;
+          iframe.title = 'YouTube video player';
+          iframe.frameBorder = '0';
+          iframe.allow =
+            'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+
+          iframe.classList.add(
+            'w-full',
+            'sm:w-3/4', 
+            'md:w-2/3', 
+            'lg:w-1/2', 
+            'h-[200px]',
+            'sm:h-[300px]',
+            'md:h-[400px]',
+            'lg:h-[500px]',
+            'mx-auto', 
+            'rounded-xl', 
+            'shadow-lg' 
+          );
+
+          slide.appendChild(iframe);
+          videoSliderWrapper.appendChild(slide);
         });
-    </script> -->
 
-<script>
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const response = await fetch('videos.json');
-    const { videos } = await response.json();
-
-    const videoSliderWrapper = document.getElementById('video-slider-wrapper');
-
-    videos.forEach((url) => {
-      const slide = document.createElement('div');
-      slide.classList.add(
-        'swiper-slide', 
-        'flex',
-        'justify-center', // Center horizontally
-        'items-center' // Center vertically
-      );
-
-const iframe = document.createElement('iframe');
-      iframe.src = url;
-      iframe.title = 'YouTube video player';
-      iframe.frameBorder = '0';
-      iframe.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-
-      iframe.classList.add(
-        'w-full',
-        'sm:w-3/4', 
-        'md:w-2/3', 
-        'lg:w-1/2', 
-        'h-[200px]',
-        'sm:h-[300px]',
-        'md:h-[400px]',
-        'lg:h-[500px]',
-        'mx-auto', 
-        'rounded-xl', 
-        'shadow-lg' 
-      );
-
-      slide.appendChild(iframe);
-      videoSliderWrapper.appendChild(slide);
+        // Initialize Swiper
+        new Swiper('.video-slider-swiper', {
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
+      } catch (error) {
+        console.error('Error loading video slider:', error);
+      }
     });
 
-    // Initialize Swiper
-    new Swiper('.video-slider-swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  } catch (error) {
-    console.error('Error loading video slider:', error);
-  }
-});
+    </script>
 
-</script>
+        <!-- Plugin Js -->
+        <script src="assets/libs/preline/preline.js"></script>
 
-    <!-- Plugin Js -->
-    <script src="assets/libs/preline/preline.js"></script>
+        <!-- swiper -->
+        <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 
-    <!-- swiper -->
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+        <!-- Gumshoejs -->
+        <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
 
-    <!-- Gumshoejs -->
-    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+        <!-- Lucid Icons -->
+        <script src="assets/libs/lucide/umd/lucide.min.js"></script>
 
-    <!-- Lucid Icons -->
-    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+        <!-- Animation on Scroll Plugin Js -->
+        <script src="assets/libs/aos/aos.js"></script>
 
-    <!-- Animation on Scroll Plugin Js -->
-    <script src="assets/libs/aos/aos.js"></script>
+        <!-- Swiper Js -->
+        <script src="assets/js/swiper.js"></script>
 
-    <!-- Swiper Js -->
-    <script src="assets/js/swiper.js"></script>
+        <!-- Theme Js -->
+        <script src="assets/js/theme.js"></script>
 
-    <!-- Theme Js -->
-    <script src="assets/js/theme.js"></script>
-
-    <!-- Video JS -->
-    <script src="assets/js/video.js"></script>
+        <!-- Video JS -->
+        <script src="assets/js/video.js"></script>
 
 
-</body>
+    </body>
 
-</html>
+    </html>
