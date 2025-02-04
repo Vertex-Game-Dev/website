@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Vertex Game Develoment and Animation Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Vertex - Game Develoment and Animation Club from MIT AOE" name="description" />
+    <meta content="vertex" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Style css -->
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Animation on Scroll css -->
+    <link href="assets/libs/aos/aos.css" rel="stylesheet" type="text/css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="bg-slate-900">
+    <div>
+        <div class="fixed top-0 -z-10">
+            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+            </div>
+        </div>
+        <div class="fixed top-0 end-0 -z-10">
+            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+            </div>
+        </div>
+        <div class="fixed inset-0 flex items-center justify-center -z-10">
+            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+            </div>
+        </div>
+        <div class="fixed bottom-0 start-0 -z-10">
+            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+            </div>
+        </div>
+        <div class="fixed bottom-0 end-0 -z-10">
+            <div class="blur-[200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-red-600/40 to-pink-600/40">
+            </div>
+        </div>
+    </div><!-- end body bg gradient -->
+
+    <!-- Navbar Start -->
+    <header id="navbar-sticky" class="navbar">
+        <div class="container">
+            <nav>
+                <!-- Navbar Brand Logo -->
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" class="h-10" alt="Vertex - GDNA">
+                </a>
+
+                <!-- Moblie Menu Toggle Button (Offcanvas Button) -->
+                <div class="lg:hidden flex items-center ms-auto px-2.5">
+                    <button
+                        class="hs-collapse-toggle inline-flex items-center justify-center h-9 w-12 rounded-md border border-white/20 bg-default-100/5"
+                        type="button" id="hs-unstyled-collapse" data-hs-collapse="#mobileMenu" data-hs-type="collapse">
+                        <i data-lucide="menu" class="h-5 w-5 stroke-white"></i>
+                    </button>
+                </div>
+
+                <!-- Nevigation Menu -->
+                <div id="mobileMenu"
+                    class="hs-collapse transition-all duration-300 lg:basis-auto basis-full grow hidden lg:flex items-center justify-center mx-auto mt-2 lg:mt-0">
+                    <ul id="navbar-navlist" class="navbar-nav">
+                        <!-- Home Page Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- {Projects} Page Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+
+                        <!-- Events Page Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
+
+                        <!-- About Page Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <!-- Faq Page Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                    </ul>
+                    <!-- Contact Button -->
+                    <div
+                        class="lg:hidden flex items-center pt-4 mt-4 lg:pt-0 lg:mt-0 border-t border-white/10 lg:border-none">
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-3"><i
+                                data-lucide="handshake" class="h-5 w-5 me-2"></i> Contact Us</a>
+                    </div>
+                </div>
+                <!-- Contact Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300"><i
+                            data-lucide="handshake" class="h-5 w-5 me-2"></i> Contact Us</a>
+                </div>
+            </nav><!-- end nav -->
+        </div>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- TEAM -->
+    <!-- Start -->
+
+    <section id="categories" class="py-24">
+        <div class="container relative">
+            <div class="flex flex-wrap items-center justify-between mb-10">
+                <div>
+                    <h2 class="text-4xl font-medium capitalize text-white mb-2">Team Members</h2>
+                    <!-- <p class="text-sm text-default-200 font-medium"> </p> -->
+                </div>
+                <a href="#"
+                    class="inline-flex items-center justify-center gap-2 border border-white/10 text-sm text-white py-1.5 px-4 rounded-full hover:bg-primary-hover transition-all duration-300">See
+                    More <i data-lucide="move-right" class="h-5 w-5"></i></a>
+            </div><!-- end flex -->
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+
+
+                <!-- Start Bid -->
+                 <!-- Supragy -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img src="assets/images/team_1/supragy.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Supragy Mishra</a>
+                                        <span class="text-xs text-default-100 block">Club Founder President</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Anooj -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img height="1225" width="1560" src="assets/images/team_1/anooj.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Anooj Jilladwar</a>
+                                        <span class="text-xs text-default-100 block">Club Founder</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+                <!-- Start Bid -->
+                 <!-- Utkarsh -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img src="assets/images/team_1/utkarsh.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Utkarsh Bonde</a>
+                                        <span class="text-xs text-default-100 block">Club Founder</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+                <!-- Start Bid -->
+                 <!-- shubham -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/shubham.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Shubham Pawade</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+                
+                <!-- Start Bid -->
+                 <!-- Prasad -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/Prasad.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Prasad Ingole</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Sujal -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/sujal.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Sujal Sonawane</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Vaishnavi -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/vaishnavi.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Vaishanvi Bansode</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Om Sinkar -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/sinkar.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Om Sinkar</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Swayam -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/swayan.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Swayam Pagare</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Pranav -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/pranav.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Pranav Palarkar</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+
+
+                <!-- Start Bid -->
+                 <!-- Londhe -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/londhe.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Omkar Member</a>
+                                        <span class="text-xs text-default-100 block">Club Head</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+                <!-- Start Bid -->
+                 <!-- mitesh -->
+                <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/mitesh.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">Mitesh Chaudhari</a>
+                                        <span class="text-xs text-default-100 block">Club Member</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Bid -->
+
+                <!-- Start Bid -->
+                 <!-- Londhe -->
+                <!-- <div class="group relative overflow-hidden backdrop-blur-3xl bg-default-950/40 rounded-lg duration-500 ease-in-out"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <div class="p-3">
+                        <div class="relative">
+                            <img width="644" height="653" src="assets/images/team_1/londhe.jpg" alt="" class="rounded-md">
+
+                            <div
+                                class="absolute top-1/2 -trandefault-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 duration-500 ease-in-out">
+                            </div>
+
+                            <div class="absolute top-0 start-0 p-2 transition-all duration-700">
+                                <div class="inline-flex justify-center w-full">
+                                    <div class="bg-gradient-to-r from-rose-500 to-blue-600 py-1 px-2.5 rounded-full">
+                                        <p id="auction-item-1" class="flex flex-col text-white font-bold text-sm"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/images/avatars/img-1.png" class="rounded-full h-10 w-10" alt="">
+                                    <span>
+                                        <a href="#"
+                                            class="text-sm font-medium  text-default-100 hover:text-primary">@Priti
+                                            Shinde Ma'am</a>
+                                        <span class="text-xs text-default-100 block">Club Head</span>
+                                    </span>
+                                </div>
+                                <a href="#"
+                                    class="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center text-lg text-default-100 hover:text-red-600 focus:text-red-600"><i
+                                        class="mdi mdi-heart"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- End Bid -->
+
+
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section>
+    <!-- End -->
+
+
+
+    <!-- start -->
+    <section class="py-14">
+        <div class="container" data-aos="zoom-out" data-aos-easing="ease" data-aos-duration="1000">
+            <div class="p-6 rounded-xl bg-default-950/40">
+                <div class="flex flex-wrap items-center gap-6">
+                    <div class="flex-shrink">
+                        <div class="flex -space-x-2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                src="assets/images/avatars/img-1.png" alt="Image Description">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                src="assets/images/avatars/img-2.png" alt="Image Description">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-default-950 bg-white"
+                                src="assets/images/avatars/img-3.png" alt="Image Description">
+                            <button class="h-10 w-10 font-medium text-primarys rounded-full bg-white">80+</button>
+                        </div>
+                    </div>
+
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-medium text-default-200">Join Our Game Development & Animation Community
+                        </h3>
+                        <p class="w-3/4 text-base font-medium text-default-300 mt-5">
+                            Connect with talented creators and teams as they share their expertise in crafting
+                            innovative games and stunning mathematical animations.
+                        </p>
+                    </div>
+
+                    <div class="flex-shrink">
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 bg-primary text-white py-2 px-6 rounded-full hover:bg-primary-hover transition-all duration-300">Join
+                            <i data-lucide="move-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div><!-- end flex -->
+            </div><!-- end bg -->
+        </div><!-- end container -->
+    </section>
+    <!-- end -->
+
+    <!-- Footer section start -->
+    <footer class="bg-default-950/40">
+        <div class="container">
+            <div class="grid lg:grid-cols-9 grid-cols-2 gap-10 lg:gap-16 py-20">
+                <div class="lg:col-span-3 sm:col-span-1 col-span-2">
+                    <img src="assets/images/logo.png" class="h-10" alt="">
+
+                    <div class="mt-7">
+                        <h6 class="text-base text-white mb-4">Follow US :</h6>
+                        <ul class="flex flex-wrap items-center gap-1">
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                        data-lucide="facebook"
+                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                        data-lucide="instagram"
+                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                        data-lucide="twitter"
+                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"
+                                    class="h-10 w-10 inline-flex items-center justify-center border border-white/10 rounded-lg transition-all duration-500 group hover:bg-primary"><i
+                                        data-lucide="linkedin"
+                                        class="h-5 w-5 text-default-300 group-hover:text-white"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">For our club</h5>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Events</a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">
+                                Club Updates</a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Collaboration
+                                Opportunities
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Support</h5>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Walkthrough</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Blog</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2 sm:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg font-medium text-white mb-2">Legal</h5>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Terms of
+                                service</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"
+                                class="text-base font-normal text-default-200 hover:text-white transition-all">Privacy
+                                policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- Container End -->
+
+        <div class="border-t border-white/10 py-6">
+            <div
+                class="container lg:px-20 flex flex-wrap justify-center items-center gap-4 h-full md:justify-between text-center md:text-start">
+                <p class="text-base font-medium text-default-400">
+                    <script>document.write(new Date().getFullYear())</script>
+                    © Vertex GDNA - <a href="#">Design & Crafted <i data-lucide="heart"
+                            class="inline h-4 w-4 text-red-500 fill-red-500"></i> by Vertex</a>
+                </p>
+                <p class="text-base font-medium text-default-400">
+                    <a href="#">Terms Conditions & Policy</a>
+                </p>
+            </div><!-- Flex End -->
+        </div><!-- Container End -->
+    </footer>
+    <!-- Footer section End -->
+
+    <!-- Back To Top Start -->
+    <button id="back-to-top" onclick="topFunction()"
+        class="fixed text-xl rounded-full z-10 bottom-5 end-5 h-8 w-8 text-center bg-white backdrop-blur-3xl text-slate-950 flex justify-center items-center transition-all duration-500 hover:bg-primary hover:text-white hover:rounded-lg">
+        <i data-lucide="chevron-up" class="h-4 w-4"></i>
+    </button>
+    <!-- Back To Top End -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const response = await fetch('videos.json');
+    const { videos } = await response.json();
+
+    const videoSliderWrapper = document.getElementById('video-slider-wrapper');
+
+    videos.forEach((url) => {
+      const slide = document.createElement('div');
+      slide.classList.add(
+        'swiper-slide', 
+        'flex',
+        'justify-center', 
+        'items-center' 
+      );
+
+const iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.title = 'YouTube video player';
+      iframe.frameBorder = '0';
+      iframe.allow =
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+
+      iframe.classList.add(
+        'w-full',
+        'sm:w-3/4', 
+        'md:w-2/3', 
+        'lg:w-1/2', 
+        'h-[200px]',
+        'sm:h-[300px]',
+        'md:h-[400px]',
+        'lg:h-[500px]',
+        'mx-auto', 
+        'rounded-xl', 
+        'shadow-lg' 
+      );
+
+      slide.appendChild(iframe);
+      videoSliderWrapper.appendChild(slide);
+    });
+
+    // Initialize Swiper
+    new Swiper('.video-slider-swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  } catch (error) {
+    console.error('Error loading video slider:', error);
+  }
+});
+
+</script>
+
+    <!-- Plugin Js -->
+    <script src="assets/libs/preline/preline.js"></script>
+
+    <!-- swiper -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Gumshoejs -->
+    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+
+    <!-- Lucid Icons -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+
+    <!-- Animation on Scroll Plugin Js -->
+    <script src="assets/libs/aos/aos.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper.js"></script>
+
+    <!-- Theme Js -->
+    <script src="assets/js/theme.js"></script>
+
+    <!-- Video JS -->
+    <script src="assets/js/video.js"></script>
+
+
+</body>
+
+</html>
