@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "window.restoreWindows": "all",
+    "window.openFoldersInNewWindow": "on",
+    "extensions.autoUpdate": true,
+    "extensions.ignoreRecommendations": false
+  }
+}
