@@ -1,0 +1,226 @@
+/* Vertex GDNA — Team Story */
+
+#team-story {
+    position: relative;
+    width: 100%;
+    height: 210vh;
+    background: transparent;
+    overflow: visible;
+}
+
+.team-story-stage {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.team-story-content {
+    position: absolute;
+    z-index: 2;
+    left: 4%;
+    top: 12%;
+    width: 48%;
+    padding-right: 40px;
+    opacity: 1;
+    transform: none;
+    pointer-events: none;
+}
+
+.team-story-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(139, 92, 246, 0.08);
+    color: rgba(216, 180, 254, 0.90);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.team-story-title {
+    margin: 0;
+    max-width: 700px;
+    color: #ffffff;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.team-story-title span {
+    display: block;
+    margin-top: 8px;
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #c026d3,
+        #e8602e
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.team-story-description {
+    max-width: 700px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.team-story-description + .team-story-description {
+    margin-top: 14px;
+}
+
+.team-story-image-wrap {
+    position: absolute;
+    z-index: 3;
+    top: 18%;
+    right: 4%;
+    width: 42vw;
+    height: 32vh;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: transparent;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.30);
+    transform-origin: center center;
+
+    /* GSAP controls these properties during scroll. */
+    will-change: width, height, top, right, border-radius;
+}
+
+.team-story-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media (min-width: 1200px) {
+
+    #team-story {
+        height: 220vh;
+    }
+
+    .team-story-content {
+        left: 4%;
+        top: 12%;
+        width: 48%;
+    }
+
+    .team-story-image-wrap {
+        top: 18%;
+        right: 4%;
+        width: 42vw;
+        height: 32vh;
+    }
+}
+
+@media (max-width: 991px) {
+
+    #team-story {
+        height: 210vh;
+    }
+
+    .team-story-content {
+        left: 5%;
+        top: 11%;
+        width: 45%;
+        padding-right: 20px;
+    }
+
+    .team-story-title {
+        font-size: clamp(2.5rem, 5.5vw, 4rem);
+    }
+
+    .team-story-description {
+        font-size: 0.95rem;
+    }
+
+    .team-story-image-wrap {
+        top: 20%;
+        right: 5%;
+        width: 43vw;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #team-story {
+        height: auto;
+    }
+
+    .team-story-stage {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 5rem 6% 6rem;
+        overflow: visible;
+    }
+
+    .team-story-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .team-story-title {
+        font-size: clamp(2.6rem, 10vw, 4rem);
+    }
+
+    .team-story-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .team-story-image-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 62vw;
+        min-height: 260px;
+        max-height: 460px;
+        margin-top: 3rem;
+        border-radius: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #team-story {
+        height: auto;
+    }
+
+    .team-story-stage {
+        position: relative;
+        height: auto;
+    }
+
+    .team-story-image-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 60vh;
+        border-radius: 16px;
+    }
+}
